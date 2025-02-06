@@ -11,6 +11,10 @@ import TypeScriptSVG from "@/public/icons/typescript-icon-svgrepo-com.svg";
 import MongoDBSVG from "@/public/icons/mongodb-svgrepo-com.svg";
 import NodeJSSVG from "@/public/icons/nodejs-icon-svgrepo-com.svg";
 import ExpressSVG from "@/public/icons/express-svgrepo-com.svg";
+import FirebaseSVG from "@/public/icons/firebase-svgrepo-com.svg";
+import BlurFade from "@/components/blur-fade";
+import BlurFadeText from "@/components/blur-fade-text";
+
 
 export const frontendSkills = [
     {
@@ -71,45 +75,59 @@ const backendSkills = [
         icon: PrismaSVG,
         description: "Next-generation ORM",
     },
+    {
+        name: "Firebase",
+        icon: FirebaseSVG,
+        description: "Cloud and Auth platform",
+    }
 
 ]
-
+const BLUR_FADE_DELAY = 0.04;
 
 export default function Skills() {
     return (
         <>
             <div className="mb-12 text-center">
-                <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-5xl md:text-6xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
-                    Technical Skills
-                </h1>
-                <p className="mt-4 text-gray-600 dark:text-gray-300">
-                    Modern web development technologies I specialize in
-                </p>
+                <BlurFade delay={BLUR_FADE_DELAY * 11}>
+                    <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-5xl md:text-6xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
+                        Technical Skills
+                    </h1>
+                    <p className="mt-4 text-gray-600 dark:text-gray-300">
+                        Modern web development technologies I specialize in
+                    </p>
+                </BlurFade>
             </div>
-
-            <div
-                className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background shadow-xl">
-                <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl md:text-4xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
-                    Frontend
-                </h1>
-                <Marquee pauseOnHover className="[--duration:30s]">
-                    {frontendSkills.map((skill) => (
-                        <SkillCard key={skill.name} {...skill} />
-                    ))}
-                </Marquee>
-                <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl md:text-4xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
-                    Backend
-                </h1>
-                <Marquee reverse pauseOnHover className="[--duration:30s]">
-                    {backendSkills.map((skill) => (
-                        <SkillCard key={skill.name} {...skill} />
-                    ))}
-                </Marquee>
                 <div
-                    className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
-                <div
-                    className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
-            </div>
+                    className="relative flex h-[550px] w-full flex-col gap-4 items-center justify-center overflow-hidden rounded-xl border bg-background shadow-xl">
+                    <BlurFadeText
+                        delay={BLUR_FADE_DELAY * 12}
+                        className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl md:text-4xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400 mb-2"
+                        text="Frontend"
+                    />
+                    <BlurFade delay={BLUR_FADE_DELAY * 13}>
+                        <Marquee pauseOnHover className="[--duration:30s]">
+                            {frontendSkills.map((skill) => (
+                                <SkillCard key={skill.name} {...skill} />
+                            ))}
+                        </Marquee>
+                    </BlurFade>
+                    <BlurFadeText
+                        delay={BLUR_FADE_DELAY * 15}
+                        className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl md:text-4xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400 pt-2"
+                        text="Backend"
+                    />
+                    <BlurFade delay={BLUR_FADE_DELAY * 15}>
+                        <Marquee reverse pauseOnHover className="[--duration:25s]">
+                            {backendSkills.map((skill) => (
+                                <SkillCard key={skill.name} {...skill} />
+                            ))}
+                        </Marquee>
+                        <div
+                            className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
+                        <div
+                            className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
+                    </BlurFade>
+                </div>
         </>
     )
 }

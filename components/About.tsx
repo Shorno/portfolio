@@ -1,12 +1,18 @@
 "use client";
 
 import BlurFade from "@/components/blur-fade";
+import {Badge} from "@/components/ui/badge";
+import {MorphingText} from "@/components/morphing-text";
 
 const BLUR_FADE_DELAY = 0.04;
-
+const texts = [
+    "Favourite",
+    "Tech",
+    "Stack",
+];
 export default function About() {
     return (
-        <section className="py-24  max-w-7xl mx-auto">
+        <section className="py-10 mx-auto">
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
                 <h2 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-4xl py-4 md:text-6xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
                     About Me
@@ -17,12 +23,15 @@ export default function About() {
                 <BlurFade delay={BLUR_FADE_DELAY * 8}>
                     <div className="prose prose-lg dark:prose-invert">
                         <p className="text-lg leading-relaxed text-muted-foreground">
-                            My journey into programming began during my college years, quickly evolving from curiosity into
-                            passion. I specialize in frontend development, with a focus on React and Next.js ecosystems, creating
+                            My journey into programming began during my college years, quickly evolving from curiosity
+                            into
+                            passion. I specialize in frontend development, with a focus on React and Next.js ecosystems,
+                            creating
                             intuitive user interfaces and solving complex problems through clean, efficient code.
                         </p>
                         <p className="text-lg leading-relaxed text-muted-foreground mt-4">
-                            Beyond coding, I&#39;m a PC and mobile game enthusiast. I&#39;m committed to continuous learning and leveraging
+                            Beyond coding, I&#39;m a PC and mobile game enthusiast. I&#39;m committed to continuous
+                            learning and leveraging
                             technology to make a positive impact on people&#39;s lives.
                         </p>
                     </div>
@@ -58,16 +67,15 @@ export default function About() {
                     </BlurFade>
 
                     <BlurFade delay={BLUR_FADE_DELAY * 10}>
-                        <div className="bg-card rounded-xl p-6 shadow-sm border">
-                            <h3 className="text-2xl font-semibold mb-6 text-card-foreground">My Favorite Tech Stack</h3>
+                        <div className="rounded-xl p-6 shadow-sm border">
+                            <MorphingText texts={texts} className={"text-left"} />
                             <div className="flex flex-wrap gap-3">
-                                {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"].map((tech) => (
-                                    <span
+                                {["React", "Next.js", "TypeScript", "Tailwind CSS", "Express.js"].map((tech) => (
+                                    <Badge
                                         key={tech}
-                                        className="px-4 py-2 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10 hover:bg-primary/10 transition-colors"
                                     >
-                    {tech}
-                  </span>
+                                        {tech}
+                                    </Badge>
                                 ))}
                             </div>
                         </div>
