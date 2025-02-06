@@ -23,9 +23,8 @@ export default function Hero() {
                     </div>
                 </BlurFade>
 
-                <div className="space-y-6">
-                    <BlurFadeText delay={BLUR_FADE_DELAY * 2} className="text-4xl font-bold md:text-5xl" text="Shorno Kamal Roy" />
-
+                <div className="space-y-6 " >
+                    <BlurFadeText delay={BLUR_FADE_DELAY * 2} className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-4xl md:text-6xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400" text="Shorno Kamal Roy" />
                     <BlurFadeText
                         delay={BLUR_FADE_DELAY * 3}
                         className="text-2xl font-semibold text-primary"
