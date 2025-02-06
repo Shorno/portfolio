@@ -8,21 +8,20 @@ import MotionIcon from "@/public/icons/motion-icon.png";
 import ShadcnSVG from "@/public/icons/shadcn-ui-seeklogo.svg";
 import AntDSVG from "@/public/icons/ant-design-svgrepo-com.svg";
 import TypeScriptSVG from "@/public/icons/typescript-icon-svgrepo-com.svg";
-export const skills = [
+import MongoDBSVG from "@/public/icons/mongodb-svgrepo-com.svg";
+import NodeJSSVG from "@/public/icons/nodejs-icon-svgrepo-com.svg";
+import ExpressSVG from "@/public/icons/express-svgrepo-com.svg";
+
+export const frontendSkills = [
     {
         name: "React",
         icon: ReactSVG,
-        description: "Component-based UI library",
+        description: "JavaScript library",
     },
     {
         name: "Next.js",
         icon: NextJs,
         description: "React framework for production",
-    },
-    {
-        name: "Prisma",
-        icon: PrismaSVG,
-        description: "Next-generation ORM",
     },
     {
         name: "Tailwind",
@@ -51,10 +50,32 @@ export const skills = [
     },
 ];
 
-const firstRow = skills.slice(0, skills.length / 2);
-const secondRow = skills.slice(skills.length / 2);
+const backendSkills = [
+    {
+        name: "MongoDB",
+        icon: MongoDBSVG,
+        description: "NoSQL database",
+    },
+    {
+        name: "Node.js",
+        icon: NodeJSSVG,
+        description: "JavaScript runtime",
+    },
+    {
+        name: "Express",
+        icon: ExpressSVG,
+        description: "Web framework",
+    },
+    {
+        name: "Prisma",
+        icon: PrismaSVG,
+        description: "Next-generation ORM",
+    },
 
-export default function Skills(){
+]
+
+
+export default function Skills() {
     return (
         <>
             <div className="mb-12 text-center">
@@ -68,13 +89,19 @@ export default function Skills(){
 
             <div
                 className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background shadow-xl">
+                <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl md:text-4xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
+                    Frontend
+                </h1>
                 <Marquee pauseOnHover className="[--duration:30s]">
-                    {firstRow.map((skill) => (
+                    {frontendSkills.map((skill) => (
                         <SkillCard key={skill.name} {...skill} />
                     ))}
                 </Marquee>
+                <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl md:text-4xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
+                    Backend
+                </h1>
                 <Marquee reverse pauseOnHover className="[--duration:30s]">
-                    {secondRow.map((skill) => (
+                    {backendSkills.map((skill) => (
                         <SkillCard key={skill.name} {...skill} />
                     ))}
                 </Marquee>
