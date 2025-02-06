@@ -4,22 +4,27 @@ import {
     motion,
     AnimatePresence,
 } from "framer-motion";
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 import Link from "next/link";
 import {ModeToggle} from "@/components/mode-toggle";
 import {usePathname} from "next/navigation";
 
-export const FloatingNav = ({
-                                navItems,
-                                className,
-                            }: {
+interface FloatingNavProps {
     navItems: {
         name: string;
         link: string;
         icon?: JSX.Element;
     }[];
     className?: string;
-}) => {
+}
+
+interface NavItem {
+    name: string;
+    link: string;
+    icon?: JSX.Element;
+}
+
+export const FloatingNav = ({navItems, className}: FloatingNavProps) => {
 
     const pathname = usePathname();
 
@@ -32,15 +37,14 @@ export const FloatingNav = ({
                     className
                 )}
             >
-                {navItems.map((navItem: any, idx: number) => (
+                {navItems.map((navItem: NavItem, idx: number) => (
                     <Link
                         key={`link=${idx}`}
                         href={navItem.link}
                         className={cn(
                             "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500",
                             pathname === navItem.link && "border border-neutral-200 dark:border-white/[0.2]  px-2 py-1 rounded-full"
-
-                            )}
+                        )}
                     >
                         <span className="block sm:hidden">{navItem.icon}</span>
                         <span className="sm:block text-sm">{navItem.name}</span>

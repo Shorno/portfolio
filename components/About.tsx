@@ -18,10 +18,10 @@ export default function About() {
                             passion. I
                             specialize in frontend development, with a focus on React and Next.js ecosystems, creating
                             intuitive user
-                            interfaces and solving complex problems through clean, efficient code. Beyond coding, I'm an
-                            PC and mobile game enthusiast. I'm committed to continuous learning and leveraging
+                            interfaces and solving complex problems through clean, efficient code. Beyond coding, I&#39;m an
+                            PC and mobile game enthusiast. I&#39;m committed to continuous learning and leveraging
                             technology to
-                            make a positive impact on people's lives.
+                            make a positive impact on people&#39;s lives.
                         </p>
                     </div>
                 </BlurFade>
@@ -30,7 +30,7 @@ export default function About() {
                     <BlurFade delay={BLUR_FADE_DELAY * 9}>
                         <div>
                             <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
-                            <ul className="list-disc list-inside space-y-2 list-none">
+                            <ul className="list-inside space-y-2 list-none">
                                 <li>🎓 Currently pursuing CSE degree at Daffodil International University</li>
                                 <li>💼 6 months of professional experience in web development</li>
                                 <li>🌟 Passionate about cutting edge technologies</li>
