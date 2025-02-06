@@ -24,8 +24,6 @@ export const FloatingNav = ({
     const pathname = usePathname();
 
 
-
-
     return (
         <AnimatePresence mode="wait">
             <motion.div
