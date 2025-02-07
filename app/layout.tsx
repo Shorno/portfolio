@@ -3,7 +3,6 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import {FloatingNav} from "@/components/ui/floating-navbar";
 import {ThemeProvider} from "@/components/theme-provider";
-
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
@@ -15,8 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Shorno | Portfolio",
-    description: "Shorno Kamal Roy's portfolio website",
+    title: 'Shorno | Portfolio',
+    description: 'Personal portfolio and showcase of projects by Shorno',
+    icons: {
+        icon: [
+            {
+                url: '/favicon.ico',
+                type: 'image/svg+xml',
+            }
+        ]
+    }
 };
 
 const navItems = [
