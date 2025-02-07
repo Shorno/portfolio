@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Download, Github, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Download, Github, Linkedin, Facebook } from "lucide-react";
 import BlurFadeText from "@/components/blur-fade-text";
 import BlurFade from "@/components/blur-fade";
 import ProfileImage from "@/public/image2.png";
@@ -48,9 +48,11 @@ export default function Hero() {
 
                     <BlurFade delay={BLUR_FADE_DELAY * 5}>
                         <div className="flex flex-wrap gap-4">
-                            <Button className="gap-2 px-6" size="lg">
-                                <Download className="w-4 h-4" />
-                                Download Resume
+                            <Button className="gap-2 px-6" size="lg" asChild>
+                                <a href="/resume-shorno.png" download="Shorno Kamal Roy.png">
+                                    <Download className="w-4 h-4" />
+                                    Download Resume
+                                </a>
                             </Button>
                         </div>
                     </BlurFade>
@@ -63,7 +65,7 @@ export default function Hero() {
                                 className="rounded-full hover:bg-primary/5 hover:text-primary transition-colors"
                                 asChild
                             >
-                                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/shorno" target="_blank" rel="noopener noreferrer">
                                     <Github className="w-5 h-5" />
                                     <span className="sr-only">GitHub</span>
                                 </a>
@@ -74,7 +76,7 @@ export default function Hero() {
                                 className="rounded-full hover:bg-primary/5 hover:text-primary transition-colors"
                                 asChild
                             >
-                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                                <a href="https://linkedin.com/in/shorno" target="_blank" rel="noopener noreferrer">
                                     <Linkedin className="w-5 h-5" />
                                     <span className="sr-only">LinkedIn</span>
                                 </a>
@@ -85,18 +87,7 @@ export default function Hero() {
                                 className="rounded-full hover:bg-primary/5 hover:text-primary transition-colors"
                                 asChild
                             >
-                                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                                    <Twitter className="w-5 h-5" />
-                                    <span className="sr-only">Twitter</span>
-                                </a>
-                            </Button>
-                            <Button
-                                variant="ghost"
-                                size="icon"
-                                className="rounded-full hover:bg-primary/5 hover:text-primary transition-colors"
-                                asChild
-                            >
-                                <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer">
+                                <a href="https://facebook.com/MrShorno911" target="_blank" rel="noopener noreferrer">
                                     <Facebook className="w-5 h-5" />
                                     <span className="sr-only">Facebook</span>
                                 </a>

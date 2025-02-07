@@ -16,14 +16,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: 'Shorno | Portfolio',
     description: 'Personal portfolio and showcase of projects by Shorno',
-    icons: {
-        icon: [
-            {
-                url: '/favicon.ico',
-                type: 'image/svg+xml',
-            }
-        ]
-    }
 };
 
 const navItems = [
