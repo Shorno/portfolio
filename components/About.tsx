@@ -3,6 +3,7 @@
 import BlurFade from "@/components/blur-fade";
 import {Badge} from "@/components/ui/badge";
 import {MorphingText} from "@/components/morphing-text";
+import SectionHeading from "@/components/SectionHeading";
 
 const BLUR_FADE_DELAY = 0.04;
 const texts = [
@@ -12,11 +13,9 @@ const texts = [
 ];
 export default function About() {
     return (
-        <section className="py-10 mx-auto">
+        <section className="pt-16 pb-32 mx-auto">
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
-                <h2 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-4xl py-4 md:text-6xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
-                    About Me
-                </h2>
+                <SectionHeading text={"About Me"}/>
             </BlurFade>
 
             <div className="grid gap-12 md:grid-cols-2">

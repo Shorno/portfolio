@@ -1,17 +1,22 @@
 import {Code, ExternalLink, LayoutDashboard, Smartphone} from "lucide-react";
 import BlurFade from "./blur-fade";
 import {Button} from "@/components/ui/button";
+import SectionHeading from "@/components/SectionHeading";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Experience() {
     return (
         <section className={"py-20"}>
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
+                <SectionHeading text={"Experience"}/>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 17}>
                 <div className="bg-card rounded-xl p-8 shadow-sm border">
                     <div className="space-y-6">
                         <div className="flex justify-between items-start flex-wrap gap-4">
                             <div>
-                                <h3 className="text-2xl font-semibold text-card-foreground">AppCube -  Frontend Developer</h3>
+                                <h3 className="text-lg md:text-2xl font-semibold text-card-foreground">AppCube - Frontend
+                                    Developer</h3>
                                 <p className="text-lg text-muted-foreground">Ubaky - Restaurant Management System</p>
                             </div>
                             <div className="md:text-right">
@@ -43,7 +48,8 @@ export default function Experience() {
                                             <div className="space-y-1">
                                                 <h5 className="font-medium text-card-foreground">Merchant Dashboard</h5>
                                                 <p className="text-sm text-muted-foreground leading-relaxed">
-                                                    Developed and maintained the merchant interface using React focusing on intuitive functionality
+                                                    Developed and maintained the merchant interface using React focusing
+                                                    on intuitive functionality
                                                 </p>
                                             </div>
                                         </div>

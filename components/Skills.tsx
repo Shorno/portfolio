@@ -33,7 +33,7 @@ export const frontendSkills = [
         description: "Utility-first CSS framework",
     },
     {
-        name: "Framer Motion",
+        name: "Motion",
         icon: MotionIcon,
         description: "Production-ready animations",
     },
@@ -68,7 +68,7 @@ const backendSkills = [
     {
         name: "Express",
         icon: ExpressSVG,
-        description: "Web framework",
+        description: "Library for Node.js",
     },
     {
         name: "Prisma",
