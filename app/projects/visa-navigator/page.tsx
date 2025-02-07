@@ -6,9 +6,6 @@ import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {Tabs} from "@/components/ui/tabs";
 import SectionHeading from "@/components/SectionHeading";
-import TrainerPage from "@/public/trainers.png"
-import ClassPage from "@/public/class.png"
-import CommunityPage from "@/public/Community.png"
 import {Badge} from "@/components/ui/badge";
 import AllVisa from "@/public/all-visa.png"
 import VisaDetails from "@/public/visa-details.png"
