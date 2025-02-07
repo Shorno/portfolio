@@ -77,7 +77,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section className="py-24">
+        <section className="py-24" id={"projects"}>
             <BlurFade delay={BLUR_FADE_DELAY * 18}>
                 <SectionHeading text={"Selected Projects"}/>
             </BlurFade>

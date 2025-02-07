@@ -6,7 +6,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Experience() {
     return (
-        <section className={"py-20"}>
+        <section className={"py-20"} id={"experience"}>
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
                 <SectionHeading text={"Experience"}/>
             </BlurFade>

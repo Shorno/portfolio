@@ -87,7 +87,7 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Skills() {
     return (
         <>
-            <div className="mb-12 text-center">
+            <div className="mb-12 text-center" id={"skills"}>
                 <BlurFade delay={BLUR_FADE_DELAY * 11}>
                     <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-5xl md:text-6xl font-bold text-transparent dark:from-gray-100 dark:to-gray-400">
                         Technical Skills

@@ -11,7 +11,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Hero() {
     return (
-        <section className="py-24 px-2 mx-auto">
+        <section className="py-24 px-2 mx-auto" id={"hero"}>
             <div className="grid gap-12 md:grid-cols-[400px_1fr] items-center">
                 {/* Profile Image */}
                 <BlurFade delay={BLUR_FADE_DELAY}>

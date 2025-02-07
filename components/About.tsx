@@ -13,7 +13,7 @@ const texts = [
 ];
 export default function About() {
     return (
-        <section className="pt-16 pb-32 mx-auto">
+        <section className="pt-16 pb-32 mx-auto" id={"about"}>
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
                 <SectionHeading text={"About Me"}/>
             </BlurFade>
