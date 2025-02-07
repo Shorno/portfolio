@@ -10,6 +10,7 @@ import {
 import BlurFade from "@/components/blur-fade";
 import Balance360 from "@/public/balance360.png"
 import SectionHeading from "@/components/SectionHeading";
+import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -17,7 +18,7 @@ const projects = [
     {
         name: "Balance360",
         image: Balance360,
-        description: "Balance360 is a web application that helps users track and manage their financial transactions efficiently. It provides a seamless interface for users to add, edit, and view their income and expenses, ensuring better financial management.",
+        description: "Balance360 is a robust, all-in-one fitness management platform offering tailored dashboards for admins, trainers, and members. With secure class booking, integrated payment processing and a vibrant community forum, it streamlines every aspect of your fitness journey while harnessing modern web technologies like React, Node.js, and MongoDB.",
         stack: ["React", "Stripe", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "Zustand", "Firebase", "TansStack Query"],
         liveLink: "https://balance360.vercel.app/",
         githubLink: "https://github.com/Shorno/balance360",
@@ -31,7 +32,8 @@ const projects = [
             "Improve performance with server-side rendering and database optimization",
             "Implement advanced analytics dashboard",
             "Integrate with more payment gateways"
-        ]
+        ],
+        link: "/projects/balance360"
     },
     {
         name: "Antique Chronicles",
@@ -49,7 +51,8 @@ const projects = [
             "Add AI-powered artifacts exploration system",
             "Improve performance with server-side rendering and database optimization",
             "Improve user experience with advanced animations and transitions",
-        ]
+        ],
+        link: "/projects/antique-chronicles"
     },
     {
         name: "Visa Navigator",
@@ -67,7 +70,8 @@ const projects = [
             "Add AI-powered visa application and tracking",
             "Improve overall design, animation and user experience",
             "Implement advanced analytics dashboard",
-        ]
+        ],
+        link: "/projects/visa-navigator"
     }
 ];
 
@@ -75,7 +79,7 @@ export default function Projects() {
     return (
         <section className="py-24">
             <BlurFade delay={BLUR_FADE_DELAY * 18}>
-               <SectionHeading text={"Selected Projects"}/>
+                <SectionHeading text={"Selected Projects"}/>
             </BlurFade>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -140,10 +144,10 @@ export default function Projects() {
                                         className="ml-auto gap-2 hover:text-primary"
                                         asChild
                                     >
-                                        <a href={`/projects/${project.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                                        <Link href={project.link || ""}>
                                             Details
                                             <ArrowRight className="w-4 h-4"/>
-                                        </a>
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>
