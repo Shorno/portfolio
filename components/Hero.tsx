@@ -49,7 +49,7 @@ export default function Hero() {
                     <BlurFade delay={BLUR_FADE_DELAY * 5}>
                         <div className="flex flex-wrap gap-4">
                             <Button className="gap-2 px-6" size="lg" asChild>
-                                <a href="/resume-shorno.png" download="Shorno Kamal Roy.png">
+                                <a href="/Shorno_Kamal_Roy-Resume.pdf" download="Shorno Kamal Roy.png">
                                     <Download className="w-4 h-4" />
                                     Download Resume
                                 </a>
